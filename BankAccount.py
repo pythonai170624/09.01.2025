@@ -47,8 +47,10 @@ class BankAccount:
             new_full_name = f"{self.fullname_owner} and {other.fullname_owner}"
             new_balance = self.balance + other.balance
             new_account = BankAccount(new_account_id, new_full_name, new_balance)
+            # new_account.created_at = min
             # new_account.created_at = ...
             return new_account
+            # [1,2] + [3,4]
 
     def __sub__(self, other):
         return self.balance - other.balance
@@ -91,6 +93,7 @@ print(b1 - b2)
 print('min', min(b1, b2))
 print(datetime.now())
 print(len(b1))
+
 #  min(5, 4, 3, 1 -1)
 #
 # print(b1)
